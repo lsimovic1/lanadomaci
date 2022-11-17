@@ -4,6 +4,7 @@ $(document).ready(function () {
     obrisiKnjigu();
     vratiKnjigu();
     azurirajKnjigu();
+    pretraga();
 });
 
 function prikaziKnjige() {
@@ -131,4 +132,26 @@ function azurirajKnjigu() {
             })
         }
     });
+}
+
+function pretraga() {
+
+    $(document).on('keyup', '#bar', function () {
+
+        var key = this.value;
+
+        $.ajax(
+            {
+                url: 'search.php',
+                method: 'post',
+                data: { key: key },
+                success: function (data) {
+                    {
+                        $('#searchtabela').html(data);
+                    }
+                }
+            }
+        )
+
+    })
 }

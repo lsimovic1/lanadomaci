@@ -18,7 +18,7 @@
 
         <div class="knjigediv">
             <a href="knjige/index.php"><button class="btn btn-primary" id="crudknjige">Knjige</button></a>
-            <a href="knjige/pretraga/pretraga.php"><button class="btn btn-success" id="pretragaknjige">Pretraga knjige</button></a>
+            <a href="knjige/pretraga/pretrazivanje.php"><button class="btn btn-success" id="pretragaknjige">Pretraga knjige</button></a>
             <a href="knjige/sortiranje/sortiranje.php"><button class="btn btn-info" id="sortiranjeknjige">Sortiranje knjiga</button></a>
             <a href="biblioteke/index.php"><button class="btn btn-danger" id="crudbiblioteke">Biblioteke</button></a>
         </div>
