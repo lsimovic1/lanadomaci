@@ -14,7 +14,7 @@
 
     <div class="container">
 
-        <h1>Dobrodošli!</br>Biblioteke u Republici Srbiji na jednom mestu!</h1>
+        <h1 style="color:white";>Dobrodošli!</br>Biblioteke u Republici Srbiji na jednom mestu!</h1>
 
         <div class="knjigediv">
             <a href="knjige/index.php"><button class="btn btn-primary" id="crudknjige">Knjige</button></a>

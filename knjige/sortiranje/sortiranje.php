@@ -12,7 +12,7 @@
 
 <body>
 
-    <h2 class="text-center mt-3">Sortiranje knjiga</h2>
+    <h2 class="text-center mt-3" style="color:white";>Sortiranje knjiga</h2>
 
     <div id="tabelasort">
 

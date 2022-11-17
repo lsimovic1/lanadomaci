@@ -14,7 +14,7 @@
 
 
     <div class="pretraga">
-        <label>Pretraga knjige: </label>
+        <label style="color:white";>Pretraga knjige: </label>
         <input type="text" name="bar" id="bar">
     </div>
 

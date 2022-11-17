@@ -30,12 +30,12 @@ h1 {
 
 body{
     background-image: url("img/biblioteka.jpg" );
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
-.pretraga {
+/*.pretraga {
     margin-top: 25px;
     margin-left: 700px;
 }
@@ -56,4 +56,4 @@ body{
 #dodajKnjigu {
     margin-top: 35px;
     margin-left: 550px;
-}
+}*/
