@@ -2,7 +2,8 @@ $(document).ready(function () {
     prikaziBiblioteke();
     dodajBiblioteku();
     obrisiBiblioteku();
-
+    vratiBiblioteku();
+    azurirajBiblioteku();
 });
 
 
@@ -72,4 +73,62 @@ function obrisiBiblioteku() {
             }
         })
     })
+}
+
+function vratiBiblioteku() {
+
+    $(document).on('click', '#btn_edit', function () {
+
+        var id = $(this).attr('value');
+
+        $.ajax({
+            url: 'crud/get.php',
+            method: 'post',
+            data: { id: id },
+            dataType: 'json',
+
+            success: function (data) {
+                $('#izmenaBiblioteke').modal('show');
+                $('#biblioteka_id').val(data.id);
+                $('#upd_naziv').val(data.naziv);
+                $('#upd_adresa').val(data.adresa);
+                $('#upd_broj_knjiga').val(data.broj_knjiga);
+
+            }
+        });
+    })
+
+}
+
+function azurirajBiblioteku() {
+
+    $(document).on('click', '#btn_update', function () {
+
+        var id = $('#biblioteka_id').val();
+        var naziv = $('#upd_naziv').val();
+        var adresa = $('#upd_adresa').val();
+        var broj_knjiga = $('#upd_broj_knjiga').val();
+
+        if (id == '' || naziv == '' || adresa == '' || broj_knjiga == '') {
+            $('#upd_praznaPolja').slideDown().delay(1500).fadeOut('slow');
+        }
+        else {
+
+            $.ajax({
+                url: 'crud/update.php',
+                method: 'post',
+                data: {
+                    id: id,
+                    naziv: naziv,
+                    adresa: adresa,
+                    broj_knjiga: broj_knjiga,
+                },
+
+                success: function (data) {
+                    $('#upd_uspesnoSacuvan').fadeIn().html(data).delay(1800).fadeOut('slow');
+                    prikaziBiblioteke();
+                }
+            })
+        }
+    });
 }

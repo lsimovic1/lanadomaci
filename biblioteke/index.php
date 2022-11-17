@@ -65,7 +65,44 @@
             </div>
         </div>
 
+        <div class="modal" tabindex="-1" id="izmenaBiblioteke">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="margin-left: 145px;">Biblioteka</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
 
+                        <div class="alert alert-danger collapse text-center" role="alert" id="upd_praznaPolja">
+                            Sva polja moraju biti popunjena!
+                        </div>
+
+                        <div class="alert alert-success collapse text-center" role="alert" id="upd_uspesnoSacuvan">
+                        </div>
+
+                        <input type="hidden" id="biblioteka_id">
+
+                        <div class="mb-2">
+                            <label for="upd_naziv" class="form-label">Naziv: </label>
+                            <input type="text" class="form-control" id="upd_naziv">
+                        </div>
+                        <div class="mb-2">
+                            <label for="upd_adresa" class="form-label">Adresa: </label>
+                            <input type="text" class="form-control" id="upd_adresa">
+                        </div>
+                        <div class="mb-2">
+                            <label for="upd_broj_knjiga" class="form-label">Broj knjiga: </label>
+                            <input type="number" class="form-control" id="upd_broj_knjiga">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btn_update">Sacuvaj izmene</button>
+                    </div>
+                </div>
+            </div>
+        </div>
  
 
 
