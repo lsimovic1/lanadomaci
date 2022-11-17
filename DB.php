@@ -5,7 +5,7 @@ class DB
     public $host = "localhost";
     public $username = "root";
     public $password = "";
-    public $db = "biblioteke";
+    public $db = "biblioteka";
     public $connection;
 
     function __construct($db)
