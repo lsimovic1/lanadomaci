@@ -1,6 +1,7 @@
 $(document).ready(function () {
     prikaziBiblioteke();
     dodajBiblioteku();
+    obrisiBiblioteku();
 
 });
 
@@ -51,5 +52,24 @@ function dodajBiblioteku() {
                     }
                 });
         }
+    })
+}
+
+function obrisiBiblioteku() {
+
+    $(document).on('click', '#btn_delete', function () {
+
+        var id = $(this).attr('value');
+
+        $.ajax({
+            url: 'crud/delete.php',
+            method: 'post',
+            data: { id: id },
+
+            success: function (data) {
+                $('#uspesnoObrisan').fadeIn().html(data).delay(1800).fadeOut('slow');
+                prikaziBiblioteke();
+            }
+        })
     })
 }
