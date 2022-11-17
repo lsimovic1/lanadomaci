@@ -62,7 +62,7 @@
 
                                 while ($row = $data->fetch_object()) :
                                 ?>
-                                    <option value="<?php echo $row->id; ?>"><?php echo $row->delo; ?></option>
+                                    <option value="<?php echo $row->id; ?>"><?php echo $row->naziv; ?></option>
                                 <?php endwhile; ?>
                             </select>
                         </div>
@@ -111,7 +111,7 @@
 
                                     while ($row = $data->fetch_object()) :
                                     ?>
-                                        <option value="<?php echo $row->id; ?>"><?php echo $row->delo; ?></option>
+                                        <option value="<?php echo $row->id; ?>"><?php echo $row->naziv; ?></option>
                                     <?php endwhile; ?>
                                 </select>
                             </div>
