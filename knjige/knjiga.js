@@ -5,6 +5,8 @@ $(document).ready(function () {
     vratiKnjigu();
     azurirajKnjigu();
     pretraga();
+    napuniSortTabelu();
+    sortiranje();
 });
 
 function prikaziKnjige() {
@@ -154,4 +156,42 @@ function pretraga() {
         )
 
     })
+}
+
+function napuniSortTabelu() {
+    $.ajax(
+        {
+            url: 'prikazi.php',
+            success: function (data) {
+                {
+                    $('#tabelasort').html(data);
+                }
+            }
+        }
+    )
+}
+
+
+function sortiranje() {
+
+    $(document).on('click', 'th', function () {
+
+        let kolona = $(this).attr('id');
+        let sort = $(this).attr('name');
+
+        $.ajax(
+            {
+                url: 'sort.php',
+                method: 'post',
+                data: { kolona: kolona, sort: sort },
+                success: function (data) {
+                    {
+                        $('#tabelasort').html(data);
+                    }
+                }
+            }
+        )
+
+    })
+
 }
